@@ -1,0 +1,110 @@
+No file chosen Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable.
+Saving Salary Data.csv to Salary Data (1).csv
+========== SALARY DATASET ==========
+   Experience Years  Salary
+0               1.1   39343
+1               1.2   42774
+2               1.3   46205
+3               1.5   37731
+4               2.0   43525
+
+Number of rows: 40
+
+
+==============================================
+TEST CASE 1: LINEAR DATA POINTS
+==============================================
+Slope: 9523.650507417704
+Intercept: 25673.01576053028
+
+Regression Equation:
+Salary = 9523.650507417704 * YearsExperience + 25673.01576053028
+
+RESULT: PASS
+Best-fit regression line generated successfully.
+
+
+==============================================
+TEST CASE 2: TRAIN-TEST DATASET
+==============================================
+Actual Salaries:
+[ 66029  64500  81363  43525  64445  55794  90000  60000  59095  91738
+  91000 105582 112635  46205]
+
+Predicted Salaries:
+[ 74773.24876271  70850.52528566  82618.69571679  44372.14181561
+  56140.31224674  63985.75920083  88502.78093236  59082.35485453
+  66927.80180862  91444.82354014  85560.73832458 113019.80266389
+ 118903.88787946  37507.37573078]
+
+Mean Squared Error: 37109629.26241926
+R2 Score: 0.9148126520965504
+
+Actual vs Predicted:
+Actual = 66029  Predicted = 74773.25
+Actual = 64500  Predicted = 70850.53
+Actual = 81363  Predicted = 82618.7
+Actual = 43525  Predicted = 44372.14
+Actual = 64445  Predicted = 56140.31
+Actual = 55794  Predicted = 63985.76
+Actual = 90000  Predicted = 88502.78
+Actual = 60000  Predicted = 59082.35
+Actual = 59095  Predicted = 66927.8
+Actual = 91738  Predicted = 91444.82
+Actual = 91000  Predicted = 85560.74
+Actual = 105582  Predicted = 113019.8
+Actual = 112635  Predicted = 118903.89
+Actual = 46205  Predicted = 37507.38
+
+RESULT: PASS
+Predictions are reasonably close to actual salaries.
+
+
+==============================================
+TEST CASE 3: POSITIVE CORRELATION
+==============================================
+Slope: 9523.650507417704
+
+RESULT: PASS
+Positive slope obtained.
+Salary increases as YearsExperience increases.
+
+
+==============================================
+TEST CASE 4: CONSTANT TARGET VALUES
+==============================================
+Original average salary: 74743.625
+Slope: 0.0
+Intercept: 74743.625
+
+RESULT: PASS
+Zero slope obtained for constant target values.
+
+
+==============================================
+TEST CASE 5: OUTLIER-HEAVY DATA
+==============================================
+Original highest salary: 122391
+Outlier salary: 611955
+
+Slope before outlier: 9523.650507417704
+Slope after outlier: 18630.44787189928
+
+MSE before outlier: 28960383.65377621
+MSE after outlier: 752491173.6163938
+
+RESULT: PASS
+Model error increased because of the outlier.
+
+
+
+
+================================================
+ TEST CASE SUMMARY
+================================================
+Test Case 1 : Linear Data -> Best-fit line
+Test Case 2 : Train-Test Data -> Prediction accuracy
+Test Case 3 : Positive Correlation -> Positive slope
+Test Case 4 : Constant Target -> Zero slope
+Test Case 5 : Outlier Data -> Error increases
+================================================
